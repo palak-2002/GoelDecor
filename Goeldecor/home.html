@@ -1,0 +1,565 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <style media="screen">
+    /* removes white spaces inbetween carasoul */
+    .header{
+      position:fixed;
+      background-color:#BCA3C1;
+      width:100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-family: Candara;
+      font-size:24px;
+      color:#577D86;
+
+    }
+    .aboutcontact{
+      background-color: #BCA3C1;
+      color: #577D86;
+      font-family: Candara;
+      text-decoration: none;
+      transition:0.3
+
+    }
+    .aboutcontact:hover{
+      background-color: #BCA3C1;
+      color: #FFF3E2;
+      font-family: Candara;
+      text-decoration: none;
+    }
+
+      #body{
+        background-color:#FFF3E2;
+      }
+
+      #img{
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      /* #imag{
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+      } */
+      .image{
+        display: inline-block;
+        padding-top: 5px;
+        margin: 5px;
+      }
+
+      #outerimag{
+        height: 600px;
+        width: 33%;
+        /* background-color:#FFF3E2; */
+
+      }
+
+
+      #menu{
+        background-color:#FFF3E2;
+        padding: 20px;
+        /* height:15%; */
+        font-size:24px;
+        color:#577D86;
+        text-decoration: none;
+        font-family: Candara;
+        transition: 0.5s;
+
+      }
+      #menu:hover{
+
+        padding: 20px;
+        /* height:15%; */
+        font-size:28px;
+        background-color:#BCA3C1;
+        font-family: Candara;
+
+      }
+      .menuh{
+        background-color:#FFF3E2;
+        /* padding: 20px; */
+        height:1820px;
+        width:600px;
+        font-size:24px;
+        color:#577D86;
+        text-decoration: none;
+        font-family: Candara;
+      }
+
+      #best{
+        background-color:#FFF3E2;
+        padding: 20px;
+        height:15%;
+        font-size:30px;
+        color:#577D86;
+        font-family: Candara;
+      }
+
+      #best1{
+        background-color:#FFF3E2;
+        padding: 20px;
+        height:15%;
+        font-size:30px;
+        color:#FFF3E2;
+      }
+      .dropbtn{
+        padding:0px;
+        margin:0px;
+        border:0px;
+      }
+      .dropdown:hover .dropdown-menu{display:block;}
+
+      .cat1{display:none
+      }
+
+      .cat2{display:none
+      }
+
+      .cat3{display:none
+      }
+
+      .cat4{display:none
+      }
+
+      .category{
+        padding: 0px 0px;
+        border-width: 0px;
+      }
+
+      .category:hover + .cat1{
+        transition:0.5s;
+        display:block;
+        height: 10%;
+        width:960px;
+        background-color: #577D86;
+        color:#BCA3C1;
+      }
+      .cat1detail{
+        height:50px;
+        padding: 10px;
+        font-style: Candara;
+      }
+      .mop1{
+        display: none;
+      }
+      .mop{
+        padding: 0px 0px;
+        border-width: 0px;
+      }
+      .mop:hover +.mop1{
+        display: block;
+        height: 10%;
+        width:960px;
+        background-color: #577D86;
+        color:#BCA3C1;
+
+      }
+      .mop1detail{
+        height:50px;
+        padding: 10px;
+        font-style: Candara;
+      }
+      .mot{
+        padding: 0px 0px;
+        border-width: 0px;
+      }
+      .mot1{
+        display: none;
+      }
+      .mot:hover +.mot1{
+        display: block;
+        height: 10%;
+        width:960px;
+        background-color: #577D86;
+        color:#BCA3C1;
+
+      }
+      .mot1detail{
+        height:50px;
+        padding: 10px;
+        font-style: Candara;
+      }
+      .faq{
+        padding: 0px 0px;
+        border-width: 0px;
+      }
+
+      /* #aboutcontact{
+
+        height:15%;
+        font-size:32px;
+        padding: 20px;
+        color:#577D86;
+        background-color:#FFF3E2;
+        text-decoration: none;
+        font-family: Candara;
+    }
+    #aboutcontact:hover{
+
+
+    } */
+
+      #cara{
+        background-color:#FFF3E2;
+      }
+
+      #maintxt1{
+        font-size:32px;
+        font-family: Candara;
+      }
+      #maintxtg{
+        font-size:32px;
+        font-family: Candara;
+        background-color:#FFF3E2;
+        color:#577D86;
+        padding:0px;
+      }
+      .maintxtgo{
+        font-size:32px;
+        font-family: Candara;
+        background-color:#FFF3E2;
+        color:#577D86;
+        padding:0px;
+      }
+
+
+      #maintxt2{
+        font-size:32px;
+        margin:0px;
+        background-color:#FFF3E2;
+        padding:5px;
+        align:center;
+        color:#577D86;
+        font-family: Candara;
+      }
+
+      #maintxt{
+
+        margin:0px;
+        background-color:#FFF3E2;
+        font-size:48px;
+        /* padding:30px; */
+        padding-bottom: :40px;
+        padding-top: 75px;
+        align:center;
+        color:#577D86;
+        font-family: Candara;
+      }
+      .abc{
+        background-color:#577D86;
+      }
+
+      img{
+        width:400px;
+        height:398px;
+      }
+      body{
+        margin: 0px;
+      }
+      a{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 10px;
+        background-color:#FFF3E2;
+
+      }
+    </style>
+  </head>
+  <body>
+<div class="header">
+    <div class="row" >
+      <div class="d-inline-flex gap-1">
+      <div class="col-sm-6" align="center" >
+<!-- class="btn " role="button" data-bs-toggle="button" -->
+        <a href="C:\Users\palak\OneDrive\Desktop\Goeldecor\about.html"  class="aboutcontact" >About us</a>
+      </div>
+        <div class="col-sm-6" align="center" >
+          <!-- class="btn " role="button" data-bs-toggle="button" -->
+        <a href="C:\Users\palak\OneDrive\Desktop\Goeldecor\contact.html"  class="aboutcontact">Contact us</a>
+      </div>
+      </div>
+</div> </div>
+
+    <p  class="lead" align="center" id="maintxt"><i>
+
+        One place for your space</i></p>
+        <div class="maintxtgo">
+
+        <br ></div>
+
+
+
+  <!-- <img src="https://img.freepik.com/free-photo/pastel-background-with-aesthetic-pink-sky_53876-129588.jpg" alt="">-->
+
+
+  <!-- <div class="row" id="cara"> class="col-sm-6"-->
+    <div >
+    <div  id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\carasoul1.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\carasoul2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\carasoul3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\carasoul4.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+  <div id="maintxtg" ><br /><br/>
+    <p align="center">
+    Goel Decor
+  </p>
+  <p align="center"  >Since 2017
+  </p><br />
+</div>
+<!-- </div> -->
+
+
+<div class="lead" align="center">
+  <p id="maintxt2">~ ~ ~ ~ ~ ~ * ~ ~ ~ ~ ~ ~ </p>
+  <p id="maintxt2"> </p><p id="maintxt2"> </p>
+<p id="maintxt2">
+  To become one of the preferential selections,</p>
+<p  id="maintxt2"> we offer to our clients</p>
+<p  id="maintxt2">
+easy payment options , timely shipment and </p>
+ <p  id="maintxt2">a huge variety of options</p>
+ <p id="maintxt2"> </p><p id="maintxt2"> </p>
+ <p id="maintxt2">~ ~ ~ ~ ~ ~ * ~ ~ ~ ~ ~ ~ </p>
+ <p id="maintxt2"> </p>
+ <p id="maintxt2"> </p><p id="maintxt2"> <div class="abc"> <br><br></div></p>
+ </div>
+
+
+
+<div class="row">
+  <div class="col-sm-4" align="center" background-color="#D5C9D9">
+
+    <!-- <div class="row" class="menuh">.
+      </div>
+    <div class="row" class="menuh">.
+      </div> -->
+<div class="row"  class="dropdown">
+  <button class="category">
+  <div  id="menu" class="lead" >
+  Categories</div></button>
+  <div class="cat1">
+    <div class="cat1detail"><b>
+    Rectangular</b></div>
+    <div class="cat1detail"><b>
+    Apple</b></div >
+    <div class="cat1detail"><b>
+    Wave</b></div >
+    <div class="cat1detail"><b>
+    Circular</b></div>
+  </div>
+  <!-- <div class="cat2">
+    bahamas
+  </div>
+  <div class="cat3">
+    bahamas
+  </div>
+  <div class="cat4">
+    bahamas
+  </div> -->
+</div>
+
+
+<!-- <div class="row" class="menuh">.
+  </div> -->
+<div class="row" class="dropdown">
+  <button class="mop" >
+  <div  id="menu" class="lead">
+  Means of Payment
+</div></button>
+<div class="mop1">
+  <div class="mop1detail"><b>
+  Net Banking</b></div>
+  <div class="mop1detail"><b>
+  Online</b></div >
+  <div class="mop1detail"><b>
+  Cash</b></div >
+
+</div>
+
+</div>
+<!-- <div class="row" class="menuh">.
+</div> -->
+<div class="row" class="dropdown">
+  <button class="faq" type="submit" onclick="replaceFunction()">
+  <div  id="menu" class="lead">
+  Frequently asked questions
+
+</div></button>
+</div>
+<!-- <div class="row" class="menuh">.
+  </div> -->
+  <div class="row" class="dropdown">
+    <button class="mot">
+    <div  id="menu" class="lead">
+    Means of Transport
+  </div></button>
+  <div class="mot1">
+    <div class="mot1detail"><b>
+    Trucks</b></div>
+    <div class="mot1detail"><b>
+    Champion</b></div >
+    <div class="mot1detail"><b>
+    Personal</b></div >
+
+  </div>
+
+</div>
+
+
+  <!-- <div class="row" class="menuh">.
+
+    </div>
+  <div class="row" class="menuh">.
+      </div>
+  <div class="row" class="menuh">.
+        </div>
+  <div class="row" class="menuh">.
+      </div>
+  <div class="row" class="menuh">.
+      </div>
+  <div class="row" class="menuh">.
+      </div>
+ -->
+  <div class="menuh">
+
+  </div>
+
+</div>
+
+
+  <div class="col-sm-4" id="outerimag">
+
+    <div class="row"  >
+      <div class="lead" id="best" > <b>
+                  Checkout our Best Sellers</b>
+      </div>   </div>
+
+      <div class="row" class="image" >
+        <a href=""  >
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd1.jpg" />
+        </a>
+      </div>
+
+      <div class="row" class="image"  >
+        <a href=""  >
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd2.jpg" />
+        </a>
+      </div>
+
+      <div class="row" class="image"  >
+        <a href=""  >
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd3.jpg" />
+        </a>
+      </div>
+
+      <div class="row" class="image"  >
+        <a href=""  >
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd4.jpg" />
+        </a>
+      </div>
+
+      <div class="row" class="image"  >
+        <a href=""  >
+      <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd5.jpg" />
+        </a>
+      </div>
+
+
+
+  </div>
+
+  <div class="col-sm-4" id="outerimag">
+    <div class="row" >
+      <div id="best1"  >
+        ~ ~ ~ ~ ~ ~
+      </div>
+      </div>
+
+<div class="row" class="image" >
+  <a href=""  >
+<img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd6.jpg" />
+  </a>
+</div>
+
+<div class="row" class="image" >
+  <a href="" >
+    <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd7.jpg" />
+    </a>
+</div>
+
+<div class="row" class="image" >
+  <a href="" >
+    <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd8.jpg" />
+    </a>
+</div>
+
+<div class="row" class="image" >
+  <a href="">
+    <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd9.jpg" />
+    </a>
+</div>
+<div class="row" class="image" >
+  <a href="" >
+    <img src="C:\Users\palak\OneDrive\Desktop\Goeldecor\gd10.jpg" />
+    </a>
+</div>
+
+  </div>
+
+
+</div>
+
+</body>
+<script >
+
+var category=document.getElementsByClassName("category");
+category.addEventListener("mouseover", cathover);
+// function cathover(){
+//   category.addClass("cat1") ;
+//   category.addClass("cat2") ;
+//   category.addClass("cat3") ;
+//   category.addClass("cat4") ;
+//
+// };
+function replaceFunction(){
+  windows.location.href = "";
+}
+
+</script>
+</html>
